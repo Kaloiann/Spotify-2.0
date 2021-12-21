@@ -1,0 +1,12 @@
+.next
+static-files
+node_modules
+theme.bundle.js
+.env.local
+yarn.lock
+all.yaml
+skaffold.yaml
+yarn-error.log
+package-lock.json
+.prettierrc
+.prettierignore
