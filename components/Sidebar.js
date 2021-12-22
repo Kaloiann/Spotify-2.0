@@ -37,7 +37,7 @@ function Sidebar() {
     
   
     return (
-        <div className="text-[#18D860] p-5 text-sm border-r border-[#18D860]  overflow-y-scroll scrollbar-hide h-screen ">
+        <div className="text-[#18D860] p-5 text-xs lg:text-sm border-r border-[#18D860]  overflow-y-scroll scrollbar-hide h-screen hidden md:inline-flex max-w-[10rem]">
            <div className="space-y-4">
             <button className="flex item-center space-x-2 hover:text-white" onClick={() => signOut({ callbackUrl: "/login" })}>
                 <LogoutIcon className="h-5 w-5"/>
@@ -66,7 +66,7 @@ function Sidebar() {
             <hr className="border-t-[0.1px] border-[#18D860]"/>
 
             {playlists.map((playlist) => (
-                <p key={playlist.id} onClick={() => setPlaylistID(playlist.id)} className="cursor-pointer hover:text-white">
+                <p key={playlist.id} onClick={() => setPlaylistID(playlist.id)} className="cursor-pointer hover:text-white truncate">
                     {playlist.name}
                 </p>
             ))}
